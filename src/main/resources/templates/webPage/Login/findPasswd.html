@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/header}">
+<!--only_footer, header-->
+<link
+        th:href="@{https://fonts.googleapis.com/css2?family=Gowun+Batang&family=IBM+Plex+Sans+KR:wght@300&family=Jua&family=Nanum+Gothic:wght@700&family=Noto+Sans+KR:wght@400;600&family=Roboto&display=swap}"
+        rel="stylesheet"
+>
+<link rel="stylesheet" th:href="@{/css/Public/font.css}">
+<th:block layout:fragment="css">
+  <link rel="stylesheet" th:href="@{/css/login/findPasswd.css}">
+</th:block>
+
+<div layout:fragment="content">
+<body>
+<div class="containerFP">
+  <div class="findPasswd title"><span id="titleTxt">비밀번호 찾기</span></div>
+  <!--변수지정-->
+  <div class="findPasswdEleWrap">
+
+<form action="" method="post" th:object="${findPasswdForm}">
+  <span class="findPasswdEle info">회원정보에 등록된 전화번호와 이메일 주소를 입력하세요.</span>
+  <div class="findPasswdEle ele">
+    <span class="findPasswdEle" ><span id="telTxt">전화번호</span><input type="text" name="tel" id="tel" ></span>
+    <span class="findPasswdEle" ><span id="emailTxt">이메일</span><input type="text" name="email" id="email"></span>
+  </div>
+  <input class="findPasswdEle" id="btnPasswd" type="submit" value="임시 비밀번호 발급">
+  <div>
+    <div class="field-error" th:if="${#fields.hasErrors('global')}" th:errors="*{global}"></div>
+  </div>
+</form>
+<div id="success" th:text="${success}"></div>
+</div>
+</body>
+</div>
+</html>

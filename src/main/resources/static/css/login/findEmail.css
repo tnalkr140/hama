@@ -1,0 +1,61 @@
+/* 컬러 */
+:root {
+    --color-font1: #003;
+    /* 글자색 */
+    --color-font2: #bbb;
+    /* 서브 글자색 */
+    --color-font3: #f0f0f0;
+    /* 밝은 회색 */
+
+    --color-bg1: #00B0FA;
+    /* 밝은 배경색 */
+    --color-bg2: #039;
+    /* 어두운 배경색 */
+}
+*{
+    color:var(--color-font1);
+}
+
+.containerFE{
+    height:600px;
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.findEmail.title{
+    display:flex;
+    align-items:end;
+    justify-content:center;
+    padding-bottom:20px;
+    width: 600px;
+    height:100px;
+    border-bottom: 1px solid var(--color-bg1);
+}
+
+#titleTxt{
+    font-size:30px;
+    letter-space:10px;
+}
+
+.findEmailEleWrap form{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-bottom:20px;
+    margin-top:50px;
+}
+.findEmailEle{
+    text-align:center;
+    margin-bottom:40px;
+    width:350px;
+}
+
+#tel{
+    height: 30px;
+}
+
+#btnEmail{
+    height:25px;
+}

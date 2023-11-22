@@ -1,0 +1,190 @@
+*{margin:0; padding:0;}
+
+/* 컬러 */
+:root {
+  --color-font1: #003;
+  /* 글자색 */
+  --color-font2: #888;
+  /* 서브 글자색 */
+  --color-font3: #f0f0f0;
+  /* 밝은 회색 */
+
+  --color-bg1: #00B0FA;
+  /* 밝은 배경색 */
+  --color-bg2: #039;
+  /* 어두운 배경색 */
+}
+
+/* 페이지 제목 + 본문 */
+.reqBoard_container{
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+   /* 페이지 제목 : 일을 하마 */
+.reqBoard_title {
+  display:flex;
+  align-items: end;
+  justify-content:right;
+  margin-top:120px;
+  width: 1024px;
+  height: 100px;
+  color: var(--color-bg2);
+  border-bottom: 1px solid var(--color-bg1);
+}
+.reqBoard_title h2{
+   padding-right:50px;
+  text-align: right;
+  font-size: 35px;
+}
+.reqBoard_title h4{
+  text-align: right;
+  color:var(--color-font2);
+  font-size: 15px;
+  margin:10px;
+}
+.profile{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.profile .fa-solid.fa-user {
+    font-size: 80px;
+    color: gray;
+    position: relative;
+    top: 10px;
+}
+/* 바디: 본문 + 여백 */
+.postlist_ask_hama {
+    display: grid;
+    place-items: center;
+  }
+
+  /* 본문 */
+  .community__postlist_ask_hama {
+    width: 1024px;
+    padding: 20px;
+    max-width: 1024px;
+  }
+
+  /* 포스트 */
+  .post-list{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  }
+
+  .post {
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    min-height: 150px;
+    width: 900px;
+  }
+  .post:hover{
+  border:1px solid var(--color-bg2);
+  }
+
+  .post img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .post h3 {
+    margin: 0;
+  }
+  
+  .post-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px; /* 최대 너비 설정 */
+    min-width: 700px;
+  }
+  .ReqPostCate{
+    color: var(--color-bg2);
+    font-weight: bold;
+  }
+  .info_top.job,
+  .info_top.local,
+  .info_top.date{
+      color: var(--color-font2);
+  }
+.hope_text{
+    font-weight: bold;
+}
+  /* 버튼 컨테이너 스타일 */
+  .post .buttons {
+  position: absolute;
+  right:15px;
+  bottom:15px;
+  display: flex;
+  flex-direction: column; /* 위아래 정렬 */
+  align-items: flex-end; /* 우측 정렬 */
+  gap: 5px; /* 버튼 사이의 간격 조절 */
+  margin-top: 10px; /* 버튼 위 여백 추가 */
+  
+  }
+  
+  .post .buttons .colorbutton,
+  .post .buttons .borderbutton{
+  height: 50px;
+  width: 120px;
+  border-radius:10px;
+  }
+
+  /*선택 카테고리*/
+  .select{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+  }
+  
+  .select__service{
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+  
+  .select__locate{
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+  
+  .select__search__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;  
+  }
+  
+  /* 검색창 높이 */
+  .search__input{
+    padding: 5px;
+    height: 15px;
+  }
+  
+  /* 검색 버튼 */
+  .search__button {
+    padding: 5px 10px;
+    background-color: var(--color-bg2);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+  }
+  .search__button:hover{
+  background-color:var(--color-bg1);
+  }
+  

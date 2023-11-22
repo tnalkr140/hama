@@ -1,0 +1,34 @@
+/* 컬러 */
+:root {
+    --color-font1: #003;
+    /* 글자색 */
+    --color-font2: #bbb;
+    /* 서브 글자색 */
+    --color-font3: #f0f0f0;
+    /* 밝은 회색 */
+
+    --color-bg1: #00B0FA;
+    /* 밝은 배경색 */
+    --color-bg2: #039;
+    /* 어두운 배경색 */
+}
+*{
+    color:var(--color-font1);
+}
+
+.successContainer{
+    margin-top:100px;
+    padding: 100px;
+    height: 450px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+.successContainer a{
+    background-color: var(--color-bg2);
+    color: #fff;
+    padding:5px;
+    margin-top:50px;
+}

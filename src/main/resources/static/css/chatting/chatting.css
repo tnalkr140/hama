@@ -1,0 +1,258 @@
+* {
+    /* outline: 1px solid grey; */
+    margin: 0;
+    padding: 0;
+    color: var(--color-font1);
+}
+/* 컬러 */
+:root {
+    --color-font1: #003;
+    /* 글자색 */
+    --color-font2: #bbb;
+    /* 서브 글자색 */
+    --color-font3: #f0f0f0;
+    /* 밝은 회색 */
+
+    --color-bg1: #00B0FA;
+    /* 밝은 배경색 */
+    --color-bg2: #039;
+    /* 어두운 배경색 */
+}
+
+/* 페이지 바디(전체 본문) */
+.read_container {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 페이지 요소 wrap (메인) */
+.read_wrap {
+    width: 800px;
+    padding: 10px;
+}
+
+/* 페이지 카테고리 */
+.read_title {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 100px;
+    padding-bottom: 50px;
+    font-weight: 200;
+    border-bottom: 1px solid var(--color-bg2);
+}
+.read_title h1{
+    text-align: center;
+    letter-spacing: 10px;
+}
+
+/* 견적서 작성자 프로필 */
+.content_profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+.profile_1.writerPhoto{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.profile_1.writerPhoto img{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: gold;
+}
+.writerInfo_left, .writerInfo_right{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.writerInfo_wrap {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+}
+.writerInfo_title{
+    color: #fff;
+    background-color: var(--color-bg2);
+    width: 90px;
+    padding: 0 5px;
+    font-size: 15px;
+    text-align: left;
+    letter-spacing: 2px;
+    margin-right: 10px;
+    font-weight: normal;
+}
+.writerInfo_content{
+    font-weight: lighter;
+    color: grey;
+}
+
+/* *{outline: 1px solid grey;} */
+/* 게시글 제목 */
+.content_title {
+    padding: 50px 0 0 30px;
+}
+.content_title h2{
+    font-size: 20px;
+}
+
+
+/* 게시글 본문 */
+.content_text {
+    padding: 50px 100px;
+    margin-bottom: 50px;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+
+
+/* 댓글창 전체 */
+
+.comment_bar{
+    background-color: var(--color-bg2);
+    width: 790px;
+    height: 30px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+.comment_bar.title, .comment_bar.title i {
+    color: #fff;
+    letter-spacing: 10px;
+    font-size: 17px;
+}
+.read_comment {
+    padding: 50px;
+    margin-bottom: 50px;
+}
+
+#cmtForm{
+    width: 700px;
+}
+/* 등록된 댓글 : 사진(삭제) + 닉네임 + 지난시간 + 댓글 + 채팅버튼 */
+.comment_userItem {
+    display: grid;
+    grid-template-areas:
+        'userPhoto nick_time_cmt chatBtn';
+    grid-template-columns: 1fr 4fr 1fr;
+}
+
+/* 댓글등록유저 + 날짜 + 삭제버튼 */
+.user_nick_time_del {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.userNick {
+    margin: 10px;
+}
+
+.userCmtTime {
+    margin: 10px;
+    font-size: 0.8rem;
+    color: var(--color-font2);
+}
+
+.userCmt {
+    padding: 5px 20px;
+    font-size: 13px;
+    font-weight: normal;
+    color: gray;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--color-font3);
+}
+
+/* 댓글 삭제 버튼 */
+.delete-comment-button{
+    background-color: transparent;
+    color: var(--color-bg2);
+    width: 50px;
+    height: 20px;
+    border: none;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+/* 채팅하기 버튼 */
+.userItem_3 {
+    grid-area: chatBtn;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#chatBtn {
+    background-color: var(--color-bg2);
+    padding: 10px;
+    height: 20px;
+    width: 50px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    color: #fff;
+}
+
+#chatBtn:hover {
+    background-color: var(--color-bg2);
+}
+
+/* 사용자 댓글 작성창 : 유저사진(삭제) + 작성란 + 전송버튼 */
+.comment_writeBox {
+    margin-top: 30px;
+    display: grid;
+    grid-template-areas:
+        'myPhoto writeBox2 sendBtn';
+    grid-template-columns: 1fr 4fr 1fr;
+}
+
+/* 댓글 작성창 : 유저 닉네임 + 작성란 */
+.writeBox2 {
+    grid-area: writeBox2;
+}
+
+#userNickInput{
+    padding: 0 5px;
+}
+
+#textInput {
+    width: 800px;
+    height: 80px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid var(--color-bg2);
+    resize: none;
+}
+
+/* 댓글등록 버튼 영역 */
+.writeBox3 {
+    grid-area: sendBtn;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+/* 댓글등록 버튼 */
+#sendBtn{
+    cursor: pointer;
+    background-color: transparent;
+    margin-left: 20px;
+    border: none;
+    font-size: 20px;
+    color: var(--color-bg2);
+}
+
+i.fa-solid.fa-user{
+   font-size: 30px;
+   color: gray;
+   position: relative;
+   margin-bottom:10px;
+}
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/header}">
+<!--only_footer, header-->
+<link
+    th:href="@{https://fonts.googleapis.com/css2?family=Gowun+Batang&family=IBM+Plex+Sans+KR:wght@300&family=Jua&family=Nanum+Gothic:wght@700&family=Noto+Sans+KR:wght@400;600&family=Roboto&display=swap}"
+    rel="stylesheet"
+>
+<link rel="stylesheet" th:href="@{/css/Public/font.css}">
+<th:block layout:fragment="css">
+    <link rel="stylesheet" th:href="@{/css/login/findEmail.css}">
+</th:block>
+
+<div layout:fragment="content">
+  <body>
+  <div class="containerFE">
+    <div class="findEmail title"><span id="titleTxt">아이디 찾기</span></div>
+  <!--변수지정-->
+    <div class="findEmailEleWrap">
+
+  <form action="" method="post" th:object="${findPasswdForm}">
+    <span class="findEmailEle">회원정보에 등록된 전화번호를 입력하세요.</span>
+    <span><input type="text" id="tel" name="tel" class="findEmailEle"></span>
+    <span><input type="submit" id="btnEmail" class="findEmailEle" value="아이디찾기"></span>
+    <div>
+      <span th:text="'회원님의 아이디는 '+${findEmail}+' 입니다.'" th:if="${findEmail}"></span>
+      <div class="field-error" th:if="${#fields.hasErrors('global')}" th:errors="*{global}">
+      </div>
+      <div th:if="@{findEmail != null}">
+      </div>
+    </div>
+  </form>
+    </div>
+  </div>
+  </body>
+</div>
+</html>
